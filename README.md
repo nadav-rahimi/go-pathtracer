@@ -1,4 +1,4 @@
-# go-basicpathtracer
+# go-pathtracer
 
 A Golang pathtracer made using the book *Raytracing In One Weekend* by *Peter Shirley* available [here](raytracing.github.io). Some references were made to [this](https://github.com/markphelps/go-trace) project as well for asynchronous optimisations and increase modularity of code.
 
