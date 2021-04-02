@@ -28,7 +28,7 @@ type World struct {
 
 func NewWorld() *World {
 	elem := make([]Hitable, 0, 5)
-	return &World{Elem:elem}
+	return &World{Elem: elem}
 }
 
 func (w *World) Hit(r Ray, tMin, tMax float64) (bool, Hit) {
@@ -62,20 +62,20 @@ type Sphere struct {
 
 func NewSphere(c Vec3, r float64, m Material) *Sphere {
 	return &Sphere{
-		Centre: c,
-		Radius: r,
+		Centre:   c,
+		Radius:   r,
 		Material: m,
 	}
 }
 
 func (s *Sphere) Hit(r Ray, tMin, tMax float64) (bool, Hit) {
 	var oc = r.Origin.Sub(s.Centre)
-	var a  = Dot(r.Direction, r.Direction)
-	var b  = Dot(oc, r.Direction)
-	var c  = Dot(oc, oc) - s.Radius*s.Radius
+	var a = Dot(r.Direction, r.Direction)
+	var b = Dot(oc, r.Direction)
+	var c = Dot(oc, oc) - s.Radius*s.Radius
 	var discrimnant = b*b - a*c
 
-	hit := Hit{Material:s.Material}
+	hit := Hit{Material: s.Material}
 
 	if discrimnant > 0 {
 		var temp = (-b - math.Sqrt(discrimnant)) / a

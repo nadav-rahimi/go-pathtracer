@@ -1,3 +1,3 @@
-module github.com/nadav-rahimi/pathtracer
+module github.com/fiwippi/go-pathtracer
 
-go 1.13
+go 1.16

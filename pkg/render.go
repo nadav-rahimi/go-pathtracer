@@ -32,7 +32,6 @@ func ColourScene(r Ray, w *World, depth int, rnd *rand.Rand, c1, c2 Colour) Colo
 		return Black
 	}
 
-
 	return backgroundColour
 }
 
@@ -57,7 +56,7 @@ func SuperSample(nx, ny, ns, i, j int, rnd *rand.Rand, cam *Camera, w *World, c1
 // Renders the given image of width nx, and height ny. Samples each pixel ns time.
 // Uses the viewpoint from cam and elements in the world "w". Uses colours c1 and c2
 // to generate the background gradient
-func Render(nx, ny, ns int, cam *Camera, w *World, c1, c2 Colour) image.Image{
+func Render(nx, ny, ns int, cam *Camera, w *World, c1, c2 Colour) image.Image {
 	img := image.NewNRGBA(image.Rect(0, 0, nx, ny))
 	numCpus := runtime.NumCPU()
 	var wg sync.WaitGroup

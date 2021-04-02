@@ -1,12 +1,12 @@
 # go-pathtracer
 
-A Golang pathtracer made using the book *Raytracing In One Weekend* by *Peter Shirley* available [here](raytracing.github.io). Some references were made to [this](https://github.com/markphelps/go-trace) project as well for asynchronous optimisations and increase modularity of code.
+A Golang pathtracer made using the book *Raytracing In One Weekend* by *Peter Shirley* available [here](raytracing.github.io). Some references were made to [this](https://github.com/markphelps/go-trace) project as well for async optimisations and increase modularity of code.
 
 ## Example Program
 Basic usage of the package is illustrated below:
 ```go
 import (
-    pt "github.com/nadav-rahimi/pathtracer"
+    pt "github.com/fiwippi/go-pathtracer/pkg"
     "image/png"
     "os"
 )
@@ -30,11 +30,5 @@ png.Encode(f, img)
 
 ## Image Examples
 ![example 1](examples/ex_1.png)
-
 ![example 2](examples/ex_2.png)
-
 ![example 3](examples/ex_3.png)
-
-## TODO
-- [ ] Robust image saving
-- [ ] Add more examples
