@@ -30,41 +30,41 @@ var (
 
 // Returns the red component of the colour in the range 0-255
 func (c Colour) R256() uint8 {
-	return uint8(255.99*c.R)
+	return uint8(255.99 * c.R)
 }
 
 // Returns the green component of the colour in the range 0-255
 func (c Colour) G256() uint8 {
-	return uint8(255.99*c.G)
+	return uint8(255.99 * c.G)
 }
 
 // Returns the blue component of the colour in the range 0-255
 func (c Colour) B256() uint8 {
-	return uint8(255.99*c.B)
+	return uint8(255.99 * c.B)
 }
 
-// Adds colour "o" to colour "c"
+// Adds two colours
 func (c Colour) Add(o Colour) Colour {
 	return Colour{c.R + o.R, c.G + o.G, c.B + o.B}
 }
 
-// Multiplies colour "c" to "o"
+// Multiplies two colours
 func (c Colour) Mul(o Colour) Colour {
 	return Colour{c.R * o.R, c.G * o.G, c.B * o.B}
 }
 
-// Multiplies colour "c" by value "f"
+// Multiplies colour by value "f"
 func (c Colour) MulFloat(f float64) Colour {
 	return Colour{c.R * f, c.G * f, c.B * f}
 }
 
-// Divides colour "c" by value "f"
+// Divides colour by value "f"
 func (c Colour) DivFloat(f float64) Colour {
 	return Colour{c.R / f, c.G / f, c.B / f}
 }
 
 // Returns the point at the gradient between two
-//colours, point should be between 0.0 and 1.0
+// colours, point should be between 0.0 and 1.0
 func Gradient(a, b Colour, f float64) Colour {
 	// scale between 0.0 and 1.0
 	f = 0.5 * (f + 1.0)

@@ -40,7 +40,7 @@ These are notes made during the creation of the project, all code adapted from t
 - Pick a random point **S** from the unit radius sphere that is tangent to the hitpoint and send a ray from the hitpoint **p** to the random point **s**. Sphere has a centre (**p** + **N**)
 
 ### Metals 
-= These reflect, only render them if the reflection exists or stack overflow occurs
+- These reflect, only render them if the reflection exists or stack overflow occurs
 - Add fuzziness to make them more realistic
 
 ### Dialectrics

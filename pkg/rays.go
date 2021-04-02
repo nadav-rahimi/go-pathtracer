@@ -1,10 +1,11 @@
 package pathtracer
 
+// Ray of "light"
 type Ray struct {
-	// Origin and direction of the Ray
 	Origin, Direction Vec3
 }
 
+// Creates a Ray
 func NewRay(o, d Vec3) Ray {
 	return Ray{o, d}
 }
@@ -13,4 +14,3 @@ func NewRay(o, d Vec3) Ray {
 func (r *Ray) PointAtParameter(t float64) Vec3 {
 	return r.Origin.Add(r.Direction.MulFloat(t))
 }
-
